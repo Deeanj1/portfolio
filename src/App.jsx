@@ -150,14 +150,13 @@ function App() {
           <p className="text-sm sm:text-base text-gray-300 mb-8 w-full sm:w-[90%] md:w-[70%] mx-auto md:mx-0">
             A detail-oriented and creative frontend developer with a background in media and a strong foundation in modern web technologies.
           </p>
-          <ScrollLink
-            to="contact"
-            smooth={true}
-            duration={500}
+          <a
+            href="/david-cv.pdf"
+            download
             className="inline-block bg-[#cb9260] hover:bg-black text-white font-semibold py-2 px-4 sm:py-3 sm:px-6 rounded-xl shadow-md transition cursor-pointer hover:border hover:border-[#cb9260] text-sm sm:text-base"
           >
-            Contact Me
-          </ScrollLink>
+            Download Cv
+          </a>
         </div>
         <div className="mt-10 md:mt-0 flex justify-center">
           <img
