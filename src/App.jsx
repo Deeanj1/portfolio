@@ -1,7 +1,7 @@
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { VscChromeClose } from "react-icons/vsc";
-import myphoto from "./assets/IMG_8393.jpeg";
+import myphoto from "./assets/replace.png";
 import me from "./assets/mee.png";
 import pvest from "./assets/pvest.png";
 import moove from "./assets/moove.png";
@@ -23,7 +23,8 @@ import json from "./assets/json.svg";
 import { useState, useEffect } from "react";
 import linkedin from "./assets/linkedin.svg";
 import email from "./assets/gmail.svg";
-import githubs from "./assets/github.svg";
+import githubs from "./assets/github.png";
+import call from "./assets/call.png";
 
 function TechIcon({ src, alt, label }) {
   return (
@@ -41,19 +42,32 @@ function TechIcon({ src, alt, label }) {
 function ProjectCard({ image, title, frameworks, info, github, live }) {
   return (
     <div className="bg-black/70 rounded-2xl shadow-lg p-6 flex flex-col items-center border-2 border-white">
-      <img src={image} alt={title} className="w-78 h-48 object-cover rounded-b-sm mb-4" />
+      <img src={image} alt={title} className="w-full h-48 object-cover rounded-b-sm mb-4" />
       <h3 className="text-lg font-bold text-[#cb9260] mb-2">{title}</h3>
       <p className="text-xs text-gray-300 mb-2">{frameworks}</p>
       <p className="text-white text-center mb-4 text-sm">{info}</p>
       <div className="flex gap-2">
-        <a href={github} target="_blank" rel="noopener noreferrer"
-          className="bg-[#cb9260] text-black px-3 py-1 rounded font-semibold hover:bg-black hover:text-[#cb9260] border border-[#cb9260] transition text-xs">View GitHub</a>
-        <a href={live} target="_blank" rel="noopener noreferrer"
-          className="bg-black text-[#cb9260] px-3 py-1 rounded font-semibold hover:bg-[#cb9260] hover:text-black border border-[#cb9260] transition text-xs">View Project</a>
+        <a
+          href={github}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-[#cb9260] text-black px-3 py-1 rounded font-semibold hover:bg-black hover:text-[#cb9260] border border-[#cb9260] transition text-xs"
+        >
+          View GitHub
+        </a>
+        <a
+          href={live}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-black text-[#cb9260] px-3 py-1 rounded font-semibold hover:bg-[#cb9260] hover:text-black border border-[#cb9260] transition text-xs"
+        >
+          View Project
+        </a>
       </div>
     </div>
   );
 }
+
 
 function App() {
   const [showImage, setShowImage] = useState(false);
@@ -162,7 +176,7 @@ function App() {
             <img
               src={me}
               alt="David Anjorin"
-              className="rounded-3xl shadow-lg object-cover w-44 h-56 md:w-64 md:h-80 max-w-full transition-transform duration-2000 ease-out"
+              className="rounded-3xl shadow-lg object-cover w-44 h-56 md:w-104 md:h-80 max-w-full transition-transform duration-2000 ease-out"
             />
           </div>
           <div className="text-center md:text-left">
@@ -184,16 +198,15 @@ function App() {
       <section className="py-12 bg-black">
         <div className="max-w-5xl mx-auto px-2">
           <h2 className="text-2xl md:text-3xl font-bold text-[#cb9260] mb-6 text-center">Tech Skills</h2>
-          <div className="
-            grid
-            grid-cols-2
-            sm:grid-cols-4
-            md:grid-cols-4
-            lg:grid-cols-7
-            gap-y-8 gap-x-4
-            justify-items-center
-            items-center
-          ">
+      <div className="
+        grid
+        grid-cols-4
+        lg:grid-cols-7
+        gap-y-8 gap-x-4
+        justify-items-center
+        items-center
+      ">
+
             <TechIcon src={git} alt="Git" label="GIT" />
             <TechIcon src={typescript} alt="TypeScript" label="TYPESCRIPT" />
             <TechIcon src={javascript} alt="JavaScript" label="JAVASCRIPT" />
@@ -267,11 +280,15 @@ function App() {
               <img src={githubs} alt="GitHub" className="w-10 h-10 mb-2" />
               <span className="text-[10px] md:text-xs font-semibold">GitHub</span>
             </a>
+          <a href="tel:+2348061419152" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center hover:text-[#cb9260]">
+          <img src={call} alt="Phone" className="w-10 h-10 mb-2" />
+          <span className="text-[10px] md:text-xs font-semibold">Phone</span>
+          </a>
             <a href="https://www.linkedin.com/in/davidanjorin" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center hover:text-[#cb9260]">
               <img src={linkedin} alt="LinkedIn" className="w-10 h-10 mb-2" />
               <span className="text-[10px] md:text-xs font-semibold">LinkedIn</span>
             </a>
-            <a href="mailto:deeanj2003@gmail.com" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center hover:text-[#cb9260]">
+            <a href="mailTo:deeanj2003@gmail.com" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center hover:text-[#cb9260]">
               <img src={email} alt="Email" className="w-10 h-10 mb-2" />
               <span className="text-[10px] md:text-xs font-semibold">Email</span>
             </a>
