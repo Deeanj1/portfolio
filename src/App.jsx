@@ -25,6 +25,8 @@ import linkedin from "./assets/linkedin.svg";
 import email from "./assets/gmail.svg";
 import githubs from "./assets/github.png";
 import call from "./assets/call.png";
+import ajopay from "./assets/apay.png"
+import cravings from "./assets/cravings.png"
 
 function TechIcon({ src, alt, label }) {
   return (
@@ -148,7 +150,7 @@ function App() {
             <span className="text-base sm:text-xl md:text-3xl">Software Developer.</span>
           </h2>
           <p className="text-sm sm:text-base text-gray-300 mb-8 w-full sm:w-[90%] md:w-[70%] mx-auto md:mx-0">
-            A detail-oriented and creative frontend developer with a background in media and a strong foundation in modern web technologies.
+            A detail-oriented and creative fullstack developer with a background in media and a strong foundation in modern web technologies.
           </p>
           <a
             href="/david-cv.pdf"
@@ -181,13 +183,13 @@ function App() {
           <div className="text-center md:text-left">
             <h2 className="text-2xl md:text-4xl font-bold mb-4 text-black">About Me</h2>
             <p className="text-sm md:text-xl text-white mb-4">
-              I'm a frontend-focused software developer with a passion for bringing interfaces to life using modern, user-centered tools and technologies. My journey into tech began after several years in social media marketing, where I learned how people interact with content, brands, and digital experiences.
+             I’m David, a developer who thrives at the intersection of creativity and technology. Over the past months, I’ve been sharpening my craft by working hands-on with modern stacks and tools that power today’s web: React, Node.js, Express, Tailwind, PostgreSQL, MongoDB, Docker, Git, and more.
               <br /><br />
-              Today, within a year and counting of experience, and working with a team on projects, I specialize in crafting clean, intuitive, and responsive web applications using tools like React, Tailwind CSS, and JavaScript and modern development tools like Vite and npm. 
+              What drives me isn’t just writing code, it’s building experiences that work seamlessly, look sleek, and scale effortlessly. From frontend interfaces to backend logic, I dive deep into the details that make products come alive. 
               <br /><br />
-              I enjoy working on interfaces that not only look good but feel right — focusing on usability, accessibility, and performance.
+              My journey into tech is fueled by curiosity, resilience, and a mindset that refuses to stay stagnant. I bring with me a background in social media marketing, giving me an edge in thinking not just about how things work, but how people connect with them.
               <br /><br />
-              Let’s build something great, and always be free to reach out 😎.
+              I’m not here to play small, I’m here to learn relentlessly, build boldly, and create solutions that leave a mark. 😎.
             </p>
 
           </div>
@@ -226,48 +228,77 @@ function App() {
         </div>
       </section>
 
-      <section id="projects" className=" relative w-full min-h-[500px] my-16">
-        <div className="absolute inset-0 w-full h-full pointer-events-none">
-          <svg
-            viewBox="0 0 100 100"
-            preserveAspectRatio="none"
-            className="w-full h-full"
-            style={{ position: "absolute", left: 0, top: 0 }}
-          >
-            <polygon points="0,0 60,0 40,100 0,100" fill="black" />
-            <polygon points="60,0 100,0 100,100 40,100" fill="#cb9260" opacity="0.9" />
-          </svg>
-        </div>
-        <div className="relative z-10 flex flex-col items-center justify-center h-full px-2">
-          <h2 className="text-3xl font-bold text-white mb-6">Some Notable Projects</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl mx-auto">
-            <ProjectCard
-              image={pvest}
-              title="Piggyvest Clone"
-              frameworks="Javascript, React, Tailwind CSS"
-              info="An almost exact clone of one of the popular investment and savings app."
-              github="https://github.com/Deeanj1/pvest"
-              live="https://pvest-4uad.vercel.app/" 
-            />
-            <ProjectCard
-              image={moove}
-              title="MOOVE Landing Page clone"
-              frameworks="HTML, CSS"
-              info="A landing page clone for the soonicorn Moove, featuring smooth scroll and responsive design."
-              github="https://github.com/Deeanj1/moove"
-              live="https://moove-alpha.vercel.app/"
-            />
-            <ProjectCard
-              image={yaymovies}
-              title="Yay-Movies website"
-              frameworks="Javascript, React, Tailwind CSS"
-              info="A simple user friendly website for latest movies, updated each day."
-              github="https://github.com/Deeanj1/yay-movies/"
-              live="https://yay-movies.vercel.app/"
-            />
-          </div>
-        </div>
-      </section>
+<section id="projects" className="relative w-full min-h-[500px] my-16">
+  <div className="absolute inset-0 w-full h-full pointer-events-none">
+    <svg
+      viewBox="0 0 100 100"
+      preserveAspectRatio="none"
+      className="w-full h-full"
+      style={{ position: "absolute", left: 0, top: 0 }}
+    >
+      <polygon points="0,0 60,0 40,100 0,100" fill="black" />
+      <polygon points="60,0 100,0 100,100 40,100" fill="#cb9260" opacity="0.9" />
+    </svg>
+  </div>
+
+  <div className="relative z-10 flex flex-col items-center justify-center h-full px-2">
+    <h2 className="text-3xl font-bold text-white mb-6">Some Notable Projects</h2>
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 w-full max-w-6xl mx-auto">
+      
+      {/* School Project - AjoPay */}
+      <ProjectCard
+        image={ajopay}
+        title="AjoPay (School Project)"
+        frameworks="Javascript, React, Tailwind CSS"
+        info="A collaborative group project: a savings and contributions platform with responsive design."
+        github="https://github.com/midestic/ajoClient.git"
+        live="https://ajo-pay.netlify.app/"
+      />
+
+      {/* Piggyvest Clone */}
+      <ProjectCard
+        image={pvest}
+        title="Piggyvest Clone"
+        frameworks="Javascript, React, Tailwind CSS"
+        info="An almost exact clone of one of the popular investment and savings app."
+        github="https://github.com/Deeanj1/pvest"
+        live="https://pvest-4uad.vercel.app/" 
+      />
+
+      {/* Cravings Project */}
+      <ProjectCard
+        image={cravings}
+        title="Cravings"
+        frameworks="Javascript, React, Tailwind CSS"
+        info="A small food brand website built with responsive design and smooth UI."
+        github="https://github.com/Deeanj1/cravings.git"
+        live="https://cravings-sigma.vercel.app/"
+      />
+
+      {/* MOOVE Landing Page */}
+      <ProjectCard
+        image={moove}
+        title="MOOVE Landing Page clone"
+        frameworks="HTML, CSS"
+        info="A landing page clone for the soonicorn Moove, featuring smooth scroll and responsive design."
+        github="https://github.com/Deeanj1/moove"
+        live="https://moove-alpha.vercel.app/"
+      />
+
+      {/* Yay-Movies */}
+      <ProjectCard
+        image={yaymovies}
+        title="Yay-Movies website"
+        frameworks="Javascript, React, Tailwind CSS"
+        info="A simple user friendly website for latest movies, updated each day."
+        github="https://github.com/Deeanj1/yay-movies/"
+        live="https://yay-movies.vercel.app/"
+      />
+    </div>
+  </div>
+</section>
+
+
 
       <section id="contact" className="bg-black py-20 px-6 text-white">
         <div className="max-w-3xl mx-auto text-center">
@@ -281,7 +312,7 @@ function App() {
             </a>
           <a href="tel:+2348061419152" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center hover:text-[#cb9260]">
           <img src={call} alt="Phone" className="w-10 h-10 mb-2" />
-          <span className="text-[10px] md:text-xs font-semibold">Phone</span>
+          <span className="text-[10px] md:text-xs font-semibold">Whatsapp</span>
           </a>
             <a href="https://www.linkedin.com/in/davidanjorin" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center hover:text-[#cb9260]">
               <img src={linkedin} alt="LinkedIn" className="w-10 h-10 mb-2" />
